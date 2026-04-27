@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="GB Real Estate & Builders – We build your dream home in Peshawar. Professional construction, renovation, and real estate services by Engineer Muhammad Daud with 10+ years of experience."/>
+  <meta name="keywords" content="real estate Peshawar, builders Peshawar, dream home Pakistan, GB Real Estate, construction company Peshawar"/>
+  <meta name="author" content="GB Real Estate & Builders"/>
+  <meta property="og:title" content="GB Real Estate & Builders – Dream Home Experts"/>
+  <meta property="og:description" content="We build your dream home in Peshawar with precision, trust, and excellence."/>
+  <title>GB Real Estate & Builders | Peshawar</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --navy: #0a1628;
+      --blue: #1565c0;
+      --sky: #29b6f6;
+      --gold: #f5a623;
+      --orange: #e8762b;
+      --white: #ffffff;
+      --off-white: #f8f9fc;
+      --light-gray: #e8ecf4;
+      --text-dark: #0d1b2a;
+      --text-muted: #6b7a99;
+      --card-bg: #ffffff;
+      --shadow: 0 8px 40px rgba(21,101,192,0.10);
+      --shadow-hover: 0 20px 60px rgba(21,101,192,0.18);
+      --radius: 16px;
+      --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--off-white);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+      background: rgba(10,22,40,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: var(--transition);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 24px; height: 68px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .nav-logo-icon {
+      width: 42px; height: 42px; background: linear-gradient(135deg, var(--blue), var(--sky));
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 20px; color: #fff; font-weight: 900; font-family: 'Playfair Display', serif;
+    }
+    .nav-logo-text { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.15rem; color: #fff; line-height: 1.1; }
+    .nav-logo-text span { color: var(--sky); display: block; font-size: 0.65rem; font-family: 'DM Sans', sans-serif; letter-spacing: 2px; text-transform: uppercase; font-weight: 400; }
+    .nav-links { display: flex; gap: 8px; align-items: center; }
+    .nav-links a {
+      color: rgba(255,255,255,0.78); font-size: 0.9rem; font-weight: 500;
+      padding: 8px 14px; border-radius: 8px; transition: var(--transition);
+    }
+    .nav-links a:hover { color: var(--sky); background: rgba(41,182,246,0.1); }
+    .nav-cta {
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      color: #fff !important; border-radius: 10px !important; padding: 9px 20px !important;
+      font-weight: 600 !important;
+    }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(232,118,43,0.4); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+    .hamburger span { width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: var(--transition); }
+    .mobile-menu {
+      display: none; position: fixed; top: 68px; left: 0; width: 100%;
+      background: var(--navy); z-index: 999; padding: 20px 24px;
+      border-top: 1px solid rgba(255,255,255,0.08); flex-direction: column; gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: rgba(255,255,255,0.85); font-size: 1rem; font-weight: 500; padding: 12px 16px; border-radius: 10px; }
+    .mobile-menu a:hover { background: rgba(255,255,255,0.08); color: var(--sky); }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh; position: relative; display: flex; align-items: center;
+      background: linear-gradient(135deg, #0a1628 0%, #0d2244 45%, #0a2a50 100%);
+      overflow: hidden; padding-top: 68px;
+    }
+    .hero-bg-shapes {
+      position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    }
+    .shape-1 {
+      position: absolute; top: -120px; right: -120px; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(21,101,192,0.35) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: pulseGlow 6s ease-in-out infinite alternate;
+    }
+    .shape-2 {
+      position: absolute; bottom: -80px; left: -80px; width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(41,182,246,0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: pulseGlow 8s ease-in-out infinite alternate-reverse;
+    }
+    .shape-3 {
+      position: absolute; top: 40%; left: 30%; width: 2px; height: 200px;
+      background: linear-gradient(to bottom, transparent, rgba(245,166,35,0.4), transparent);
+      transform: rotate(25deg);
+    }
+    @keyframes pulseGlow {
+      0% { transform: scale(1); opacity: 0.7; }
+      100% { transform: scale(1.15); opacity: 1; }
+    }
+    /* floating grid pattern */
+    .hero::before {
+      content: ''; position: absolute; inset: 0; z-index: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-container {
+      position: relative; z-index: 1;
+      max-width: 1200px; margin: 0 auto; padding: 80px 24px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(41,182,246,0.12); border: 1px solid rgba(41,182,246,0.25);
+      color: var(--sky); padding: 8px 18px; border-radius: 50px; font-size: 0.78rem;
+      font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 24px;
+      animation: fadeUp 0.8s ease both;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 900; color: #fff; line-height: 1.12; margin-bottom: 20px;
+      animation: fadeUp 0.8s 0.15s ease both;
+    }
+    .hero-title .accent { color: var(--gold); display: block; }
+    .hero-sub {
+      font-size: 1.05rem; color: rgba(255,255,255,0.65); line-height: 1.7;
+      max-width: 480px; margin-bottom: 36px;
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+    .hero-btns {
+      display: flex; gap: 14px; flex-wrap: wrap;
+      animation: fadeUp 0.8s 0.45s ease both;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(90deg, var(--orange), var(--gold));
+      color: #fff; font-weight: 700; font-size: 0.95rem; padding: 15px 30px;
+      border-radius: 12px; border: none; cursor: pointer; transition: var(--transition);
+      box-shadow: 0 8px 30px rgba(232,118,43,0.35);
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(232,118,43,0.5); }
+    .btn-whatsapp {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #25d366; color: #fff; font-weight: 700; font-size: 0.95rem;
+      padding: 15px 30px; border-radius: 12px; border: none; cursor: pointer; transition: var(--transition);
+      box-shadow: 0 8px 30px rgba(37,211,102,0.3);
+    }
+    .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(37,211,102,0.45); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: transparent; color: #fff; font-weight: 600; font-size: 0.95rem;
+      padding: 14px 28px; border-radius: 12px; border: 2px solid rgba(255,255,255,0.25);
+      cursor: pointer; transition: var(--transition);
+    }
+    .btn-outline:hover { border-color: var(--sky); color: var(--sky); background: rgba(41,182,246,0.08); }
+
+    /* Hero Stats */
+    .hero-stats {
+      display: flex; gap: 32px; margin-top: 40px; padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      animation: fadeUp 0.8s 0.6s ease both;
+    }
+    .stat-item { text-align: center; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--sky); line-height: 1; }
+    .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+    /* Hero Visual */
+    .hero-visual {
+      position: relative; animation: fadeUp 0.8s 0.2s ease both;
+    }
+    .hero-img-card {
+      border-radius: 24px; overflow: hidden; position: relative;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+    }
+    .hero-main-img {
+      width: 100%; height: 420px; object-fit: cover;
+      background: linear-gradient(135deg, #1565c0 0%, #0a3d7c 100%);
+      display: flex; align-items: center; justify-content: center; position: relative;
+    }
+    .hero-img-placeholder {
+      background: url('https://images.unsplash.com/photo-1590595906931-81f04f0ccebb?w=900&q=85') center/cover no-repeat;
+      width: 100%; height: 420px; border-radius: 24px;
+      filter: brightness(0.85);
+    }
+    .hero-overlay-card {
+      position: absolute; bottom: -20px; left: -20px;
+      background: rgba(10,22,40,0.9); backdrop-filter: blur(16px);
+      border: 1px solid rgba(41,182,246,0.2); border-radius: 14px;
+      padding: 16px 20px; display: flex; align-items: center; gap: 14px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    .overlay-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--orange), var(--gold)); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.1rem; flex-shrink: 0; }
+    .overlay-text p { font-size: 0.72rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; }
+    .overlay-text strong { font-size: 0.95rem; color: #fff; font-weight: 700; }
+
+    .hero-badge-float {
+      position: absolute; top: -16px; right: -16px;
+      background: var(--sky); color: var(--navy); border-radius: 50%;
+      width: 80px; height: 80px; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; font-weight: 800;
+      font-size: 0.7rem; text-align: center; line-height: 1.2;
+      box-shadow: 0 8px 30px rgba(41,182,246,0.4);
+      animation: spinSlow 12s linear infinite;
+    }
+    @keyframes spinSlow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== SECTION COMMON ===== */
+    section { padding: 90px 24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--blue); font-weight: 700; font-size: 0.78rem;
+      letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px;
+    }
+    .section-label::before {
+      content: ''; width: 28px; height: 2px; background: var(--orange); border-radius: 2px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif; font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 900; color: var(--text-dark); line-height: 1.2; margin-bottom: 16px;
+    }
+    .section-title .highlight { color: var(--blue); }
+    .section-desc { font-size: 1rem; color: var(--text-muted); line-height: 1.75; max-width: 580px; }
+
+    /* ===== ABOUT ===== */
+    #about { background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+    .about-img-wrapper { position: relative; }
+    .about-img {
+      width: 100%; height: 480px; border-radius: 24px; overflow: hidden;
+      background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=85') center/cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+    .about-img-accent {
+      position: absolute; bottom: -24px; right: -24px;
+      width: 180px; height: 180px; border-radius: 20px;
+      background: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&q=85') center/cover no-repeat;
+      border: 5px solid var(--white);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    }
+    .about-content { padding-top: 10px; }
+    .about-features { margin: 28px 0; display: flex; flex-direction: column; gap: 14px; }
+    .about-feature {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 16px 20px; background: var(--off-white); border-radius: 12px;
+      border-left: 3px solid var(--blue); transition: var(--transition);
+    }
+    .about-feature:hover { border-left-color: var(--orange); background: #fff; box-shadow: var(--shadow); }
+    .about-feature-icon { width: 40px; height: 40px; background: linear-gradient(135deg, var(--blue), var(--sky)); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.95rem; flex-shrink: 0; }
+    .about-feature-text h4 { font-weight: 700; font-size: 0.95rem; color: var(--text-dark); margin-bottom: 3px; }
+    .about-feature-text p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+    .about-cta { margin-top: 10px; }
+
+    /* ===== FOUNDER ===== */
+    #founder { background: linear-gradient(135deg, #0a1628 0%, #0d2244 100%); }
+    .founder-card {
+      display: flex; gap: 60px; align-items: center;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 28px; padding: 60px; position: relative; overflow: hidden;
+    }
+    .founder-card::before {
+      content: '"'; position: absolute; top: 20px; right: 40px;
+      font-family: 'Playfair Display', serif; font-size: 12rem; font-weight: 900;
+      color: rgba(41,182,246,0.06); line-height: 1;
+    }
+    .founder-avatar {
+      width: 200px; height: 200px; border-radius: 24px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--sky) 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 900; color: #fff;
+      border: 3px solid rgba(41,182,246,0.3); position: relative;
+    }
+    .founder-avatar-label {
+      font-family: 'DM Sans', sans-serif; font-size: 0.65rem; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7);
+      margin-top: 8px;
+    }
+    .founder-exp-badge {
+      position: absolute; bottom: -12px; right: -12px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff; border-radius: 12px; padding: 8px 14px;
+      font-weight: 800; font-size: 0.8rem; text-align: center; line-height: 1.2;
+      box-shadow: 0 8px 20px rgba(232,118,43,0.4);
+    }
+    .founder-content { flex: 1; }
+    .founder-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 900; color: #fff; margin-bottom: 6px; }
+    .founder-role { color: var(--sky); font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; letter-spacing: 0.5px; }
+    .founder-desc { color: rgba(255,255,255,0.7); font-size: 0.98rem; line-height: 1.8; margin-bottom: 24px; }
+    .founder-stats { display: flex; gap: 28px; flex-wrap: wrap; }
+    .f-stat { text-align: center; }
+    .f-stat-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: var(--gold); }
+    .f-stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+
+    /* ===== SERVICES ===== */
+    #services { background: var(--off-white); }
+    .services-header { text-align: center; margin-bottom: 56px; }
+    .services-header .section-desc { margin: 0 auto; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .service-card {
+      background: var(--white); border-radius: var(--radius); padding: 36px 28px;
+      box-shadow: var(--shadow); transition: var(--transition); border: 1px solid transparent;
+      position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--sky)); transform: scaleX(0);
+      transition: var(--transition); transform-origin: left;
+    }
+    .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); border-color: rgba(21,101,192,0.1); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+      width: 64px; height: 64px; border-radius: 16px; margin-bottom: 22px;
+      display: flex; align-items: center; justify-content: center; font-size: 1.6rem;
+      transition: var(--transition);
+    }
+    .service-card:hover .service-icon { transform: scale(1.1); }
+    .s1 { background: linear-gradient(135deg, #e3f2fd, #bbdefb); color: var(--blue); }
+    .s2 { background: linear-gradient(135deg, #fff3e0, #ffe0b2); color: var(--orange); }
+    .s3 { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); color: #2e7d32; }
+    .s4 { background: linear-gradient(135deg, #fce4ec, #f8bbd0); color: #c62828; }
+    .s5 { background: linear-gradient(135deg, #f3e5f5, #e1bee7); color: #6a1b9a; }
+    .s6 { background: linear-gradient(135deg, #e0f7fa, #b2ebf2); color: #00838f; }
+    .service-title { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--text-dark); margin-bottom: 10px; }
+    .service-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* ===== GALLERY ===== */
+    #gallery { background: var(--white); }
+    .gallery-header { margin-bottom: 48px; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 220px 220px;
+      gap: 16px;
+    }
+    .gallery-item {
+      border-radius: 16px; overflow: hidden; position: relative; cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: var(--transition);
+    }
+    .gallery-item:nth-child(1) { grid-column: 1 / 3; grid-row: 1 / 2; }
+    .gallery-item:nth-child(2) { grid-column: 3 / 4; }
+    .gallery-item:nth-child(3) { grid-column: 4 / 5; }
+    .gallery-item:nth-child(4) { grid-column: 1 / 2; }
+    .gallery-item:nth-child(5) { grid-column: 2 / 4; grid-row: 2 / 3; }
+    .gallery-item:nth-child(6) { grid-column: 4 / 5; }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;
+    }
+    .gallery-item:hover { box-shadow: 0 20px 50px rgba(0,0,0,0.25); }
+    .gallery-item:hover img { transform: scale(1.08); }
+    .gallery-overlay {
+      position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,22,40,0.7), transparent);
+      opacity: 0; transition: var(--transition); display: flex; align-items: flex-end; padding: 20px;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-overlay-text { color: #fff; font-weight: 600; font-size: 0.88rem; }
+
+    /* ===== WHY US ===== */
+    #why-us { background: var(--off-white); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .why-img {
+      border-radius: 24px; height: 500px;
+      background: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=85') center/cover no-repeat;
+      position: relative; box-shadow: var(--shadow);
+    }
+    .why-img-badge {
+      position: absolute; top: 24px; left: 24px;
+      background: var(--navy); color: #fff; border-radius: 14px; padding: 14px 20px;
+      border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(8px);
+    }
+    .why-img-badge p { font-size: 0.7rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+    .why-img-badge strong { font-size: 1.3rem; font-family: 'Playfair Display', serif; color: var(--sky); }
+    .why-cards { display: flex; flex-direction: column; gap: 16px; }
+    .why-card {
+      display: flex; gap: 18px; align-items: flex-start;
+      padding: 22px 24px; background: var(--white); border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: var(--transition);
+    }
+    .why-card:hover { transform: translateX(8px); box-shadow: var(--shadow); }
+    .why-icon { width: 48px; height: 48px; border-radius: 12px; background: linear-gradient(135deg, var(--blue), var(--sky)); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.1rem; flex-shrink: 0; }
+    .why-text h4 { font-weight: 700; font-size: 1rem; color: var(--text-dark); margin-bottom: 5px; }
+    .why-text p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
+
+    /* ===== CONTACT ===== */
+    #contact { background: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; }
+    .contact-info h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 800; color: var(--text-dark); margin-bottom: 10px; }
+    .contact-info p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 32px; }
+    .contact-items { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+    .contact-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 18px 20px; background: var(--off-white); border-radius: 14px;
+      transition: var(--transition); cursor: pointer;
+    }
+    .contact-item:hover { background: var(--light-gray); transform: translateX(5px); }
+    .contact-item-icon {
+      width: 46px; height: 46px; border-radius: 12px; display: flex;
+      align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;
+    }
+    .ci-blue { background: linear-gradient(135deg, var(--blue), var(--sky)); color: #fff; }
+    .ci-green { background: linear-gradient(135deg, #25d366, #1db954); color: #fff; }
+    .ci-orange { background: linear-gradient(135deg, var(--orange), var(--gold)); color: #fff; }
+    .ci-navy { background: linear-gradient(135deg, var(--navy), var(--blue)); color: #fff; }
+    .contact-item-text p { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 3px; }
+    .contact-item-text strong { font-size: 0.95rem; font-weight: 700; color: var(--text-dark); }
+    .contact-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .contact-right { display: flex; flex-direction: column; gap: 20px; }
+    .map-wrapper { border-radius: 20px; overflow: hidden; height: 320px; box-shadow: var(--shadow); }
+    .map-wrapper iframe { width: 100%; height: 100%; border: none; }
+    .social-links { display: flex; gap: 12px; }
+    .social-link {
+      width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center;
+      justify-content: center; font-size: 1.1rem; color: #fff; transition: var(--transition);
+    }
+    .sl-fb { background: #1877f2; }
+    .sl-wa { background: #25d366; }
+    .sl-tt { background: #000; }
+    .social-link:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.25); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--navy); color: rgba(255,255,255,0.75);
+      padding: 60px 24px 28px;
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.75; color: rgba(255,255,255,0.55); margin-top: 16px; max-width: 300px; }
+    .footer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .footer-logo-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--blue), var(--sky)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #fff; font-weight: 900; font-family: 'Playfair Display', serif; }
+    .footer-logo-text { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: #fff; }
+    .footer-logo-text span { display: block; font-size: 0.6rem; font-family: 'DM Sans', sans-serif; letter-spacing: 2px; text-transform: uppercase; font-weight: 400; color: var(--sky); }
+    .footer-col h4 { font-weight: 700; color: #fff; margin-bottom: 18px; font-size: 0.95rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 0.88rem; color: rgba(255,255,255,0.55); transition: var(--transition); }
+    .footer-col ul li a:hover { color: var(--sky); padding-left: 5px; }
+    .footer-social { display: flex; gap: 10px; margin-top: 16px; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom p { font-size: 0.82rem; color: rgba(255,255,255,0.35); }
+
+    /* ===== FLOATING BUTTONS ===== */
+    .float-wa {
+      position: fixed; bottom: 28px; right: 28px; z-index: 999;
+      width: 58px; height: 58px; background: #25d366; color: #fff;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; box-shadow: 0 8px 30px rgba(37,211,102,0.5);
+      transition: var(--transition); animation: bounce 2.5s infinite;
+    }
+    .float-wa:hover { transform: scale(1.12); }
+    .float-call {
+      position: fixed; bottom: 98px; right: 28px; z-index: 999;
+      width: 58px; height: 58px; background: linear-gradient(135deg, var(--blue), var(--sky));
+      color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.35rem; box-shadow: 0 8px 30px rgba(21,101,192,0.45);
+      transition: var(--transition);
+    }
+    .float-call:hover { transform: scale(1.12); }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+
+    /* ===== REVEAL ANIMATIONS ===== */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-container { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px 40px; }
+      .hero-visual { display: none; }
+      .hero-stats { gap: 20px; }
+      .about-grid, .why-grid, .contact-grid, .founder-card { grid-template-columns: 1fr; flex-direction: column; gap: 36px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 180px);
+      }
+      .gallery-item:nth-child(1) { grid-column: 1 / 3; grid-row: auto; }
+      .gallery-item:nth-child(5) { grid-column: 1 / 3; grid-row: auto; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .founder-card { padding: 32px 24px; }
+      .founder-avatar { width: 140px; height: 140px; font-size: 3rem; }
+      .hero-btns { gap: 10px; }
+      .btn-primary, .btn-whatsapp, .btn-outline { padding: 13px 22px; font-size: 0.88rem; }
+    }
+    @media (max-width: 480px) {
+      .about-img-accent { display: none; }
+      .hero-stats { flex-wrap: wrap; }
+      .contact-btns { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <div class="nav-logo-icon">GB</div>
+        <div class="nav-logo-text">
+          GB Real Estate
+          <span>& Builders</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#founder">Founder</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact" class="nav-cta">Contact Us</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()" id="ham">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#founder" onclick="toggleMenu()">Founder</a>
+      <a href="#services" onclick="toggleMenu()">Services</a>
+      <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+      <a href="#why-us" onclick="toggleMenu()">Why Us</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape-1"></div>
+      <div class="shape-2"></div>
+      <div class="shape-3"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-star" style="font-size:0.75rem"></i>
+          Peshawar's Trusted Builder
+        </div>
+        <h1 class="hero-title">
+          We Build Your
+          <span class="accent">Dream Home</span>
+        </h1>
+        <p class="hero-sub">GB Real Estate & Builders — your trusted partner for premium construction, stunning architecture, and smart real estate investments in Peshawar and beyond.</p>
+        <div class="hero-btns">
+          <a href="tel:03159177973" class="btn-primary">
+            <i class="fas fa-phone"></i> Call Now
+          </a>
+          <a href="https://wa.me/923159177973" target="_blank" class="btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="#services" class="btn-outline">
+            <i class="fas fa-arrow-down"></i> Our Services
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">200+</div>
+            <div class="stat-label">Projects Done</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">500+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-badge-float">10+ YRS<br>EXPERT</div>
+        <div class="hero-img-card">
+          <img src="https://images.unsplash.com/photo-1590595906931-81f04f0ccebb?w=900&q=85" alt="GB Real Estate Building" style="width:100%;height:420px;object-fit:cover;border-radius:24px;display:block;"/>
+        </div>
+        <div class="hero-overlay-card">
+          <div class="overlay-icon"><i class="fas fa-building"></i></div>
+          <div class="overlay-text">
+            <p>Verified Business</p>
+            <strong>GB Real Estate & Builders</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrapper reveal">
+          <div class="about-img"></div>
+          <div class="about-img-accent"></div>
+        </div>
+        <div class="about-content reveal">
+          <div class="section-label">About Us</div>
+          <h2 class="section-title">Building Trust, One <span class="highlight">Home at a Time</span></h2>
+          <p class="section-desc">GB Real Estate & Builders is a premier construction and real estate firm based in Peshawar, Pakistan. Founded with a vision to make quality housing accessible, we combine engineering excellence with creative design to transform your dream into reality.</p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon"><i class="fas fa-hard-hat"></i></div>
+              <div class="about-feature-text">
+                <h4>Expert Engineering Team</h4>
+                <p>Led by qualified engineers with decades of combined experience in structural and civil projects.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="about-feature-text">
+                <h4>Quality Guaranteed</h4>
+                <p>We use only the finest materials and follow strict quality protocols on every project we undertake.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon"><i class="fas fa-clock"></i></div>
+              <div class="about-feature-text">
+                <h4>On-Time Delivery</h4>
+                <p>We respect your time. Our projects are delivered on schedule, every time, without compromise.</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-cta">
+            <a href="#contact" class="btn-primary"><i class="fas fa-envelope"></i> Get Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOUNDER ===== -->
+  <section id="founder">
+    <div class="container">
+      <div class="reveal" style="text-align:center;margin-bottom:48px;">
+        <div class="section-label" style="justify-content:center;color:var(--sky);">Meet the Visionary</div>
+        <h2 class="section-title" style="color:#fff;">The Mind Behind <span style="color:var(--sky);">GB Builders</span></h2>
+      </div>
+      <div class="founder-card reveal">
+        <div class="founder-avatar">
+          MD
+          <div class="founder-avatar-label">Engineer</div>
+          <div class="founder-exp-badge">10+ Yrs<br>Exp</div>
+        </div>
+        <div class="founder-content">
+          <h3 class="founder-title">Engineer Muhammad Daud</h3>
+          <p class="founder-role"><i class="fas fa-user-tie" style="margin-right:8px;"></i>Founder & Chief Engineer — GB Real Estate & Builders</p>
+          <p class="founder-desc">
+            Engineer Muhammad Daud is the visionary founder of GB Real Estate & Builders, bringing over <strong style="color:#fff;">10 years of hands-on engineering experience</strong> to every project. With a deep passion for architecture and a relentless commitment to quality, he has transformed hundreds of construction dreams into solid, beautiful realities across Peshawar and the surrounding regions.
+          </p>
+          <p class="founder-desc">
+            His engineering expertise spans residential construction, commercial buildings, interior design, and real estate consultancy. Under his leadership, GB Builders has earned a reputation for delivering projects that are not only structurally sound but also aesthetically exceptional — always on time and within budget. His hands-on approach ensures that every client receives personalized attention and world-class service from concept to completion.
+          </p>
+          <div class="founder-stats">
+            <div class="f-stat">
+              <div class="f-stat-num">10+</div>
+              <div class="f-stat-label">Years in Field</div>
+            </div>
+            <div class="f-stat">
+              <div class="f-stat-num">200+</div>
+              <div class="f-stat-label">Projects Led</div>
+            </div>
+            <div class="f-stat">
+              <div class="f-stat-num">500+</div>
+              <div class="f-stat-label">Clients Served</div>
+            </div>
+            <div class="f-stat">
+              <div class="f-stat-num">100%</div>
+              <div class="f-stat-label">Commitment</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="container">
+      <div class="services-header reveal">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Our <span class="highlight">Premium Services</span></h2>
+        <p class="section-desc">From ground-up construction to luxurious interiors, we offer a comprehensive range of real estate and building solutions tailored to your vision and budget.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon s1"><i class="fas fa-home"></i></div>
+          <h3 class="service-title">Residential Construction</h3>
+          <p class="service-desc">Custom-built homes designed to match your lifestyle. From foundation to finishing, we handle every detail of your dream residence with precision and care.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon s2"><i class="fas fa-building"></i></div>
+          <h3 class="service-title">Commercial Buildings</h3>
+          <p class="service-desc">Professional office complexes, retail spaces, and commercial plazas built to international standards with structural integrity and modern aesthetics.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon s3"><i class="fas fa-paint-roller"></i></div>
+          <h3 class="service-title">Interior Design & Renovation</h3>
+          <p class="service-desc">Transform your existing space with our expert interior design and renovation services. Modern finishes, custom layouts, and smart use of every inch.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon s4"><i class="fas fa-drafting-compass"></i></div>
+          <h3 class="service-title">Architecture & Planning</h3>
+          <p class="service-desc">Innovative architectural designs and structural plans that balance beauty with functionality. We bring your blueprints to life with engineering precision.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon s5"><i class="fas fa-key"></i></div>
+          <h3 class="service-title">Real Estate Consultancy</h3>
+          <p class="service-desc">Expert guidance on buying, selling, or investing in property. We help you make smart decisions with our deep local market knowledge and experience.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon s6"><i class="fas fa-tools"></i></div>
+          <h3 class="service-title">Repairs & Maintenance</h3>
+          <p class="service-desc">Keep your property in top condition with our professional repair and maintenance services. Quick, reliable, and affordable solutions for every issue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="gallery">
+    <div class="container">
+      <div class="gallery-header reveal">
+        <div class="section-label">Our Portfolio</div>
+        <h2 class="section-title">Projects That <span class="highlight">Speak for Themselves</span></h2>
+        <p class="section-desc">A showcase of completed projects — each one a testament to our craftsmanship, attention to detail, and commitment to excellence.</p>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=85" alt="Luxury Villa Project"/>
+          <div class="gallery-overlay"><div class="gallery-overlay-text"><i class="fas fa-search-plus" style="margin-right:6px"></i>Luxury Villa</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=85" alt="Modern House Exterior"/>
+          <div class="gallery-overlay"><div class="gallery-overlay-text"><i class="fas fa-search-plus" style="margin-right:6px"></i>Modern Home</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=85" alt="Commercial Building"/>
+          <div class="gallery-overlay"><div class="gallery-overlay-text"><i class="fas fa-search-plus" style="margin-right:6px"></i>Commercial Plaza</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85" alt="Beautiful House"/>
+          <div class="gallery-overlay"><div class="gallery-overlay-text"><i class="fas fa-search-plus" style="margin-right:6px"></i>Residential Project</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&q=85" alt="Architecture Design"/>
+          <div class="gallery-overlay"><div class="gallery-overlay-text"><i class="fas fa-search-plus" style="margin-right:6px"></i>Architecture Design</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=85" alt="Interior Living Room"/>
+          <div class="gallery-overlay"><div class="gallery-overlay-text"><i class="fas fa-search-plus" style="margin-right:6px"></i>Interior Design</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section id="why-us">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-img reveal">
+          <div class="why-img-badge">
+            <p>Projects Completed</p>
+            <strong>200+</strong>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="section-label">Why Choose Us</div>
+          <h2 class="section-title">The GB <span class="highlight">Difference</span></h2>
+          <p class="section-desc" style="margin-bottom:32px;">We don't just build structures — we build lasting relationships. Here's why families and businesses trust GB Real Estate & Builders.</p>
+          <div class="why-cards">
+            <div class="why-card">
+              <div class="why-icon"><i class="fas fa-certificate"></i></div>
+              <div class="why-text">
+                <h4>Licensed & Certified Engineers</h4>
+                <p>Every project is supervised by certified professionals ensuring full compliance with Pakistani building codes and safety standards.</p>
+              </div>
+            </div>
+            <div class="why-card">
+              <div class="why-icon"><i class="fas fa-hand-holding-heart"></i></div>
+              <div class="why-text">
+                <h4>Client-First Approach</h4>
+                <p>Your satisfaction is our priority. We maintain open communication at every stage, keeping you informed and in control.</p>
+              </div>
+            </div>
+            <div class="why-card">
+              <div class="why-icon"><i class="fas fa-wallet"></i></div>
+              <div class="why-text">
+                <h4>Transparent Pricing</h4>
+                <p>No hidden costs, no surprises. We provide detailed quotes and stick to them throughout the entire project lifecycle.</p>
+              </div>
+            </div>
+            <div class="why-card">
+              <div class="why-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="why-text">
+                <h4>Local Market Expertise</h4>
+                <p>Deep roots in Peshawar's real estate market. We know the land, the people, and the best locations for your investment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:56px;" class="reveal">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Start Your <span class="highlight">Dream Project Today</span></h2>
+        <p class="section-desc" style="margin:0 auto;">Ready to build your future? Reach out to us and get a free consultation from our expert team — we're always open and ready to help.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="reveal">
+          <h3>Contact Information</h3>
+          <p>Call, WhatsApp, or visit our office. We're always open and happy to assist you with any enquiry.</p>
+          <div class="contact-items">
+            <a href="tel:03159177973" class="contact-item">
+              <div class="contact-item-icon ci-blue"><i class="fas fa-phone"></i></div>
+              <div class="contact-item-text">
+                <p>Mobile / Call</p>
+                <strong>0315 9177973</strong>
+              </div>
+            </a>
+            <a href="https://wa.me/923159177973" target="_blank" class="contact-item">
+              <div class="contact-item-icon ci-green"><i class="fab fa-whatsapp"></i></div>
+              <div class="contact-item-text">
+                <p>WhatsApp</p>
+                <strong>+92 315 9177973</strong>
+              </div>
+            </a>
+            <a href="mailto:mdaud7512@gmail.com" class="contact-item">
+              <div class="contact-item-icon ci-orange"><i class="fas fa-envelope"></i></div>
+              <div class="contact-item-text">
+                <p>Email Address</p>
+                <strong>mdaud7512@gmail.com</strong>
+              </div>
+            </a>
+            <div class="contact-item">
+              <div class="contact-item-icon ci-navy"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-item-text">
+                <p>Office Address</p>
+                <strong>Office No. 4&5, Gani Market, Shehyaseen Town, Nasir Bagh Road, Peshawar</strong>
+              </div>
+            </div>
+          </div>
+          <div class="contact-btns">
+            <a href="tel:03159177973" class="btn-primary"><i class="fas fa-phone"></i> Call Now</a>
+            <a href="https://wa.me/923159177973" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+        <div class="contact-right reveal">
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13270.35!2d71.5185!3d34.0150!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d917b6c2e3a5b1%3A0x1234abcd!2sNasir+Bagh+Road%2C+Peshawar%2C+Pakistan!5e0!3m2!1sen!2s!4v1690000000000!5m2!1sen!2s"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div>
+            <p style="font-weight:700;color:var(--text-dark);margin-bottom:10px;">Follow Us On</p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/share/g/18d9VXGJFL/" target="_blank" class="social-link sl-fb"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://wa.me/923159177973" target="_blank" class="social-link sl-wa"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://tiktok.com/@gbrealestatebuilders" target="_blank" class="social-link sl-tt"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+          <div style="background:var(--off-white);border-radius:16px;padding:24px;border-left:4px solid var(--blue);">
+            <p style="font-weight:700;font-size:1rem;margin-bottom:6px;color:var(--text-dark);">
+              <i class="fas fa-clock" style="color:var(--blue);margin-right:8px;"></i>Always Open
+            </p>
+            <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.6;">We're available 7 days a week, any time you need us. Call or WhatsApp us anytime for a free quote or consultation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon">GB</div>
+            <div class="footer-logo-text">
+              GB Real Estate
+              <span>& Builders</span>
+            </div>
+          </div>
+          <p>Building dreams into reality. Trusted real estate and construction experts in Peshawar, Pakistan with over 10 years of engineering excellence.</p>
+          <div class="footer-social" style="margin-top:20px;">
+            <a href="https://www.facebook.com/share/g/18d9VXGJFL/" target="_blank" class="social-link sl-fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/923159177973" target="_blank" class="social-link sl-wa"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://tiktok.com/@gbrealestatebuilders" target="_blank" class="social-link sl-tt"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#founder">Our Founder</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Portfolio</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#services">Residential Construction</a></li>
+            <li><a href="#services">Commercial Buildings</a></li>
+            <li><a href="#services">Interior Design</a></li>
+            <li><a href="#services">Architecture & Planning</a></li>
+            <li><a href="#services">Real Estate Consultancy</a></li>
+            <li><a href="#services">Repair & Maintenance</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 GB Real Estate & Builders. All rights reserved.</p>
+        <p>Office No. 4&5, Gani Market, Shehyaseen Town, Nasir Bagh Road, Peshawar, Pakistan</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING BUTTONS ===== -->
+  <a href="https://wa.me/923159177973" target="_blank" class="float-wa" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:03159177973" class="float-call" title="Call Us">
+    <i class="fas fa-phone"></i>
+  </a>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // Mobile menu toggle
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('open');
+    }
+
+    // Scroll reveal animation
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, 80 * (Array.from(reveals).indexOf(entry.target) % 4));
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        nav.style.background = 'rgba(10,22,40,0.99)';
+        nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.3)';
+      } else {
+        nav.style.background = 'rgba(10,22,40,0.97)';
+        nav.style.boxShadow = 'none';
+      }
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 100) current = s.id;
+      });
+      navLinks.forEach(a => {
+        a.style.color = '';
+        if (a.getAttribute('href') === '#' + current) a.style.color = 'var(--sky)';
+      });
+    });
+
+    // Smooth counter animation for hero stats
+    function animateCounter(el, target) {
+      let count = 0;
+      const step = Math.ceil(target / 60);
+      const interval = setInterval(() => {
+        count += step;
+        if (count >= target) { count = target; clearInterval(interval); }
+        el.textContent = count + (el.dataset.suffix || '+');
+      }, 25);
+    }
+    const statNums = document.querySelectorAll('.stat-num');
+    const statsObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const raw = el.textContent.replace(/\D/g, '');
+          el.dataset.suffix = el.textContent.replace(/[0-9]/g, '');
+          animateCounter(el, parseInt(raw));
+          statsObs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    statNums.forEach(el => statsObs.observe(el));
+  </script>
+</body>
+</html>
